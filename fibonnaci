@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+public class Fibonacci {
+    public static void main(String[] args){
+        int posisi1 = 0;
+        int posisi2 = 1;
+        int temp;
+        
+        String batasString;
+        int batas;
+        
+        batasString = JOptionPane.showInputDialog("Masukkan Batas Nilai :");
+        batas = Integer.parseInt(batasString);
+        
+        while (posisi1 <= batas) {
+            System.out.print(posisi1 + " ");
+            temp = posisi1 + posisi2;
+            posisi1 = posisi2;
+            posisi2 = temp;
+        }
+    }
+}
